@@ -1,1 +1,7 @@
 @use './scss/base/base'; 
+
+// import utils style 
+@use "./scss/utils/utils"; 
+
+// import component header style
+@use './scss/components/header.scss'

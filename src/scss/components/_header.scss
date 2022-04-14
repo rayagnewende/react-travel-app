@@ -1,0 +1,51 @@
+
+@use "../abstracts/mixins"; 
+@use "../abstracts/variables"; 
+
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative; 
+    clip-path: polygon(0 0, 100% 0, 99% 89%, 51% 94%, 0 100%, 0% 50%);
+    &__logo {
+        @include mixins.position( absolute, 3rem, 0, null, null, null, null); 
+        z-index: 1;
+       img {
+           width: 15rem; 
+           height: auto; 
+           object-fit: cover; 
+       }
+    }
+    &__video {
+       @include mixins.position(absolute, 0,0, null, null, 100%, 100%);
+        overflow: hidden;
+    }
+    &__contents {
+        @include mixins.position(absolute, 0,0, null, null, 100%, 100%);
+        background: rgba(0, 0, 0, 0.4);
+        &__text {
+            @include mixins.align(flex, center, center, 100vh);
+            &__child {
+                &__h1 {
+                    color:variables.$white ; 
+                    text-transform: uppercase;
+                    font-size: 4.2rem;
+                    line-height: 3rem;
+                    font-weight: 2.7rem;
+                    @include mixins.animation(heading,ease-in,1s, -8rem,0);
+                    
+                }
+                &__p {
+                    margin-top: 1rem;
+                    font-size: 1.5rem;
+                    color:variables.$white;
+                    @include mixins.animation(Subheading,ease-out,1s, -10rem,0);
+                }
+                &__link {
+                    margin-top: 1rem;
+                    @include mixins.animation(headingButton,ease-out,1s, 8rem,0);
+                }
+            }
+        }
+    }
+}
