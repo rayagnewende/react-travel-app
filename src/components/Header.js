@@ -1,9 +1,10 @@
 import React, { useState} from 'react';
 
 const Header = ({heading, paragraphe, children}) => {
-    const [video, setVideo] = useState("/assets/videos/header.mp4"); 
-    const [poster, setPoster] = useState("/assets/images/screen.png"); 
-    const [logo, setLogo] = useState("/assets/images/logo.png"); 
+    const [video] = useState("/assets/videos/header.mp4"); 
+    const [poster] = useState("/assets/images/screen.png"); 
+    const [logo] = useState("/assets/images/logo.png"); 
+   
     return(
         <div className="header">
             <div className="container pr">

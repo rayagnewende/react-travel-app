@@ -47,3 +47,11 @@ text-transform: uppercase;
         }
     }
 }
+
+@mixin toggleSpans($disp, $bg, $wd, $hg) {
+    display: $disp;
+    background: $bg;
+    width: $wd;
+    height: $hg;
+    transition: all .3s linear;
+}

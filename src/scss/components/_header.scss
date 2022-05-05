@@ -1,6 +1,5 @@
 
-@use "../abstracts/mixins"; 
-@use "../abstracts/variables"; 
+@use "../abstracts"; 
 
 .header {
     width: 100%;
@@ -8,7 +7,7 @@
     position: relative; 
     clip-path: polygon(0 0, 100% 0, 99% 89%, 51% 94%, 0 100%, 0% 50%);
     &__logo {
-        @include mixins.position( absolute, 3rem, 0, null, null, null, null); 
+        @include abstracts.position( absolute, 3rem, 0, null, null, null, null); 
         z-index: 1;
        img {
            width: 15rem; 
@@ -17,33 +16,33 @@
        }
     }
     &__video {
-       @include mixins.position(absolute, 0,0, null, null, 100%, 100%);
+       @include abstracts.position(absolute, 0,0, null, null, 100%, 100%);
         overflow: hidden;
     }
     &__contents {
-        @include mixins.position(absolute, 0,0, null, null, 100%, 100%);
+        @include abstracts.position(absolute, 0,0, null, null, 100%, 100%);
         background: rgba(0, 0, 0, 0.4);
         &__text {
-            @include mixins.align(flex, center, center, 100vh);
+            @include abstracts.align(flex, center, center, 100vh);
             &__child {
                 &__h1 {
-                    color:variables.$white ; 
+                    color:abstracts.$white ; 
                     text-transform: uppercase;
                     font-size: 4.2rem;
                     line-height: 3rem;
                     font-weight: 2.7rem;
-                    @include mixins.animation(heading,ease-in,1s, -8rem,0);
+                    @include abstracts.animation(heading,ease-in,1s, -8rem,0);
                     
                 }
                 &__p {
                     margin-top: 1rem;
                     font-size: 1.5rem;
-                    color:variables.$white;
-                    @include mixins.animation(Subheading,ease-out,1s, -10rem,0);
+                    color:abstracts.$white;
+                    @include abstracts.animation(Subheading,ease-out,1s, -10rem,0);
                 }
                 &__link {
                     margin-top: 1rem;
-                    @include mixins.animation(headingButton,ease-out,1s, 8rem,0);
+                    @include abstracts.animation(headingButton,ease-out,1s, 8rem,0);
                 }
             }
         }
