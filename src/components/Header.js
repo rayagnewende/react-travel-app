@@ -1,6 +1,7 @@
 import React, { useState} from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const Header = ({heading, paragraphe, children}) => {
+const Header = ({heading, paragraphe, children, image}) => {
     const [video] = useState("/assets/videos/header.mp4"); 
     const [poster] = useState("/assets/images/screen.png"); 
     const [logo] = useState("/assets/images/logo.png"); 
@@ -13,7 +14,9 @@ const Header = ({heading, paragraphe, children}) => {
                 </div>
             </div>
             <div className="header__video">
+                { image ? <LazyLoadImage  src={image} alt={image} /> : 
                 <video src={video} autoPlay loop muted poster={poster}></video>
+                }
             </div>
             <div className="header__contents">
                 <div className="container">

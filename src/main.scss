@@ -20,3 +20,12 @@
 
 // import layout style
 @use "./scss/layout/layout"; 
+
+// import astracts
+@use "./scss/abstracts/buttons" ; 
+
+// import destinationInfo style 
+@use "./scss/components/destinationInfo"; 
+
+// import cities style 
+@use "./scss/components/cities"; 

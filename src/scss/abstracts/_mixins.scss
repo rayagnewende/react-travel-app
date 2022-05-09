@@ -17,9 +17,9 @@
     height: $height;
 }
 
-@mixin button($color1, $color2, $height, $fontSize, $bdr, $paddingVertical, $paddingHorizontal){
+@mixin button($color1, $color2,$textColor,  $height, $fontSize, $bdr, $paddingVertical, $paddingHorizontal){
     background: linear-gradient(to right,$color1, $color2);
-    color: variables.$white;
+    color: $textColor;
     height: $height;
     line-height: 4.5rem;
     display: inline-block;

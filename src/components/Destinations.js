@@ -1,5 +1,6 @@
 import React, { useContext, useState} from 'react';
 import DestinationsContext from '../context/DestinationsContext';
+import DestinationsList from './DestinationsList';
 
 const Destinations = () => {
     const {destinationsData, dispatch} = useContext(DestinationsContext); 
@@ -11,7 +12,7 @@ const Destinations = () => {
     return(
         <div className="destinations">
             <div className="container">             
-                <div className="row">
+                <div className="row mr-minus-15 ml-minus-15">
                     <div className="col-6 p-15">
                         <h3 className='destinations__heading'>{state.heading}</h3>
                     </div>
@@ -22,6 +23,13 @@ const Destinations = () => {
                     </div>
                 </div>
                
+                <div className="destinations__block">
+                    <div className="row mr-minus-15 ml-minus-15">
+                        { destinationsData.destinations.map( destination => (
+                            <DestinationsList destination={destination}  key={destination.id} />
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );

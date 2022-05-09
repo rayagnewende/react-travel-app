@@ -8,6 +8,7 @@ import Nav from "./components/Nav";
 import NavProvider from "./prodiver/NavProvider";
 import Toggle from "./components/Toggle";
 import DestinationsProvider from "./prodiver/DestinationsProvider";
+import Details from "./pages/Details";
 
 function App() {
 
@@ -26,6 +27,9 @@ function App() {
                     </Route>
                     <Route path="/about"  exact >
                       <About />                                                                                                                                                                                                                                                                                                                                                                                                
+                    </Route>
+                    <Route path="/details/:id"  exact >
+                      <Details />                                                                                                                                                                                                                                                                                                                                                                                                
                     </Route>
                     <Route >
                       <NotFound  />

@@ -2,10 +2,14 @@ import React, {useReducer} from 'react';
 import DestinationsContext from '../context/DestinationsContext';
 import DestinationsReducer from '../reducers/DestinationsReducer';
 import {destinations} from "../data/destinations"; 
+import { Cities } from "../data/cities"; 
 
 const DestinationsProvider = ({children}) => {
     const [destinationsData, dispatch] = useReducer(DestinationsReducer, {
-        destinations
+        destinations, 
+        details:{}, 
+        cities:Cities, 
+        filteredCities:[]
     })
     return (
         <DestinationsContext.Provider value={{destinationsData, dispatch}}>
